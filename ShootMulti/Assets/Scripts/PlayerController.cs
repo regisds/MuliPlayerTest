@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody myRigidbody;
 	Vector3 velocity;
 
-
-
 	void Start () {
 		myRigidbody = GetComponent<Rigidbody> ();
 	}
@@ -23,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 		Vector3 heightCorrectPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
 		transform.LookAt (heightCorrectPoint);
 	}
+
 
 	public void FixedUpdate(){
 		myRigidbody.MovePosition(myRigidbody.position + velocity *Time.fixedDeltaTime);
