@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{A0D86919-0453-B527-2BCF-626DFFA3FC71}") = "ShootMulti", "Assembly-CSharp.csproj", "{F1AD7A05-E201-F21F-92D9-0B3F2724C38B}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShootMulti", "Assembly-CSharp.csproj", "{F1AD7A05-E201-F21F-92D9-0B3F2724C38B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
