@@ -7,7 +7,6 @@ using UnityEngine.AI;
 
 public class Enemy : LivingEntity {
 
-
 	public enum State{Idle, Chasing, Attacking};
 	State currentState; 
 	NavMeshAgent pathfinder;
