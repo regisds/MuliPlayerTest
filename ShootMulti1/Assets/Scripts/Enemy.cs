@@ -1,13 +1,16 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent (typeof (UnityEngine.AI.NavMeshAgent))]
+[RequireComponent (typeof (NavMeshAgent))]
+
 public class Enemy : LivingEntity {
 
 	public enum State {Idle, Chasing, Attacking};
 	State currentState;
 
-	UnityEngine.AI.NavMeshAgent pathfinder;
+	NavMeshAgent pathfinder;
 	Transform target;
 	LivingEntity targetEntity;
 	Material skinMaterial;
@@ -26,7 +29,7 @@ public class Enemy : LivingEntity {
 	
 	protected override void Start () {
 		base.Start ();
-		pathfinder = GetComponent<UnityEngine.AI.NavMeshAgent> ();
+		pathfinder = GetComponent<NavMeshAgent> ();
 		skinMaterial = GetComponent<Renderer> ().material;
 		originalColour = skinMaterial.color;
 
@@ -62,7 +65,6 @@ public class Enemy : LivingEntity {
 
 			}
 		}
-
 	}
 
 	IEnumerator Attack() {
